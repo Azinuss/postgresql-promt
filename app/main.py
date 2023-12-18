@@ -4,9 +4,7 @@ from api import promt
 app = FastAPI(
     docs_url='/api/docs'
 )
-admin_app = FastAPI(
-    docs_url='/api/docs/admin'
-)
+
 app.include_router(promt.router, prefix="/api/v1/promt")
 
 
